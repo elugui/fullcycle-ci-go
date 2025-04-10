@@ -3,12 +3,12 @@ on:
   pull_request:
     branches:
       - develop
-strategy:
-  matrix:
-    go-version: [1.14, 1.15]
 jobs:
   check-application:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: [1.14, 1.15]
     steps:
       # Checkout the repository
       - uses: actions/checkout@v2
