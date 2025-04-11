@@ -31,8 +31,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v5
         with:
-          push: true
-          # platforms: linux/arm64 foi adicionada p/ rodar no Apple Silicon M3
+          push: true        
           platforms: linux/amd64,linux/arm64
           tags: elugui/ci-go:latest
 
